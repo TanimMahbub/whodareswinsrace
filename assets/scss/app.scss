@@ -29,11 +29,11 @@ $color-bird: url(../img/section-title-icon-color.svg);
 	--yellow: #f9e3ac;
 }
 
-.c-darkBlue {color: $darkBlue;}
-.c-lightBlue {color: $lightBlue;}
-.c-skyBlue {color: $skyBlue;}
-.c-red {color: $red;}
-.c-yellow {color: $yellow;}
+.c-darkBlue {color: $darkBlue !important;}
+.c-lightBlue {color: $lightBlue !important;}
+.c-skyBlue {color: $skyBlue !important;}
+.c-red {color: $red !important;}
+.c-yellow {color: $yellow !important;}
 
 $heading: 'Poppins', sans-serif;
 
@@ -204,6 +204,8 @@ img {max-width: 100%}
 	left: 0;
 	z-index: 3;
 }
+
+.no-click {pointer-events: none}
 
 .page-wrapper {
 	overflow: hidden;
@@ -932,10 +934,6 @@ img {max-width: 100%}
 }
 /* blog-section end */
 
-.no-click {
-	pointer-events: none;
-}
-
 /* footer start */
 footer {
 	overflow: hidden;
@@ -1217,3 +1215,49 @@ footer {
 	}
 }
 /* page-header end */
+
+/* epp-section start */
+.epp-section {
+	width: min(750px, 100%);
+	margin: 0 auto;
+	padding: 30px;
+	background: rgba($skyBlue, 10%);
+	border: 20px solid $skyBlue;
+	border-radius: 16px;
+
+	p {
+		font-size: 18px;
+		line-height: 32px;
+		color: $darkBlue;
+		&+p {margin-top: 20px;}
+		&.note {
+			font-weight: 600;
+			letter-spacing: 1px;
+			background: rgba($skyBlue, 70%);
+			color: rgba($white, 90%);
+			margin: 0 -40px;
+			padding: 10px 30px;
+			margin-top: 10px;
+		}
+	}
+
+	a {@include primary-button($white, $red, $skyBlue)}
+}
+/* epp-section end */
+
+/* prize-money start */
+.prize-money {
+	h2 {
+		font-size: 32px;
+		font-weight: 900;
+		color: $darkBlue;
+		padding-bottom: 5px;
+		margin-bottom: 15px;
+		border-bottom: 3px solid $red;
+		& + p {
+			font-size: 18px;
+			font-weight: 500;
+		}
+	}
+}
+/* prize-money end */
